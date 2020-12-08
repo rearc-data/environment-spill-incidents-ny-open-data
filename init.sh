@@ -108,10 +108,10 @@ update () {
 
 delete () {
   echo "Destroying the CloudFormation stack"
-  aws cloudformation delete-stack --stack-name "$CFN_STACK_NAME" --region "$REGION$PROFILE"
+  aws cloudformation delete-stack --stack-name "$CFN_STACK_NAME" --region "$REGION" $PROFILE
 
   #check status of cloudformation stack delete action
-  aws cloudformation wait stack-delete-complete --stack-name "$CFN_STACK_NAME" --region "$REGION$PROFILE"
+  aws cloudformation wait stack-delete-complete --stack-name "$CFN_STACK_NAME" --region "$REGION" $PROFILE
   if [[ $? -eq 0 ]]
   then
     # Cloudformation stack deleted
