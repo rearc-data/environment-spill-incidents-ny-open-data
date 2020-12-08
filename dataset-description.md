@@ -1,0 +1,1 @@
+The Spill Incidents dataset is provided by the New York State Department of Environmental Conservation, Division of Environmental Remediation through the [Open Data NY](https://data.ny.gov) portal. The dataset contains the New York state's records of spills of petroleum and other hazardous materials. The update frequency is monthly.

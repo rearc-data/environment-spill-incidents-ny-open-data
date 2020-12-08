@@ -1,11 +1,6 @@
-<a href="https://www.rearc.io/data/">
-    <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
-</a>
-
-
 ## Spill Incidents | New York State Department of Environmental Conservation | Open Data NY
 
-You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [https://aws.amazon.com/marketplace/pp/prodview-laez6he5aznsy](https://aws.amazon.com/marketplace/pp/prodview-laez6he5aznsy).
+The source code outlining how this product gathers, transforms, revises and publishes its datasets is available at [https://github.com/rearc-data/environment-spill-incidents-ny-open-data](https://github.com/rearc-data/environment-spill-incidents-ny-open-data).
 
 ### Main Overview
 The dataset file included with this product is provided in CSV format. README files are also included to offer context on data fields used throughout the dataset files. The specific files included with each revisions may vary.
