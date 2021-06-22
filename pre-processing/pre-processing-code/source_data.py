@@ -30,7 +30,7 @@ def source_dataset():
     if response is None:
         raise Exception('There was an issue downloading the dataset')
             
-    data_set_name = os.environ['DATA_SET_NAME']
+    data_set_name = os.environ['DATASET_NAME']
 
     data_dir = '/tmp'
     if not os.path.exists(data_dir):
@@ -38,7 +38,7 @@ def source_dataset():
 
     file_location = os.path.join(data_dir, data_set_name+'.csv')
 
-    s3_bucket = os.environ['S3_BUCKET']
+    s3_bucket = os.environ['ASSET_BUCKET']
     s3 = boto3.client('s3')
     s3_resource = boto3.resource('s3')
     config = TransferConfig(multipart_threshold=1024*25, max_concurrency=10,
