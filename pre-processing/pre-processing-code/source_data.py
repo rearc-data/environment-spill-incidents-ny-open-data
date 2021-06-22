@@ -30,7 +30,7 @@ def source_dataset():
     if response is None:
         raise Exception('There was an issue downloading the dataset')
 
-    data_set_name = os.environ['DATA_SET_NAME']
+    data_set_name = os.environ['DATASET_NAME']
 
     data_dir = '/tmp'
     if not os.path.exists(data_dir):
