@@ -10,7 +10,7 @@ from io import BytesIO
 
 def source_dataset():
     source_dataset_url = "https://data.ny.gov/resource/u44d-k5fk.csv"
-    
+
     response = None
     retries = 5
     for attempt in range(retries):
@@ -26,10 +26,10 @@ def source_dataset():
             time.sleep(0.2 * attempt)
         else:
             break
-            
+
     if response is None:
         raise Exception('There was an issue downloading the dataset')
-            
+
     data_set_name = os.environ['DATA_SET_NAME']
 
     data_dir = '/tmp'
@@ -38,7 +38,7 @@ def source_dataset():
 
     file_location = os.path.join(data_dir, data_set_name+'.csv')
 
-    s3_bucket = os.environ['S3_BUCKET']
+    s3_bucket = os.environ['ASSET_BUCKET']
     s3 = boto3.client('s3')
     s3_resource = boto3.resource('s3')
     config = TransferConfig(multipart_threshold=1024*25, max_concurrency=10,
